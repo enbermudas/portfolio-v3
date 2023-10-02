@@ -58,6 +58,19 @@ const projects: IProject[] = [
       libraries: ["Firebase"],
     },
   },
+  {
+    id: 4,
+    type: "library",
+    title: "Fail Express",
+    link: "https://github.com/enbermudas/fail-express/",
+    description:
+      "An express error-handler middleware for JSON APIs. This library uses http-status.",
+    tags: ["Express", "Node", "Javascript"],
+    features: {
+      core: ["Node"],
+      libraries: ["http-errors"],
+    },
+  },
 ];
 
 export default projects;

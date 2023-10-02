@@ -6,12 +6,12 @@ function App() {
   return (
     <div
       id="app"
-      className="h-screen w-screen bg-base-100 text-accent-content antialiased"
+      className="h-screen bg-base-100 text-accent-content antialiased"
     >
       <div className="relative isolate">
         <Navbar />
 
-        <div className="container mx-auto mt-6 flex max-w-5xl flex-col gap-12 p-6">
+        <div className="container mx-auto mt-6 max-w-5xl ">
           <Outlet />
         </div>
 
