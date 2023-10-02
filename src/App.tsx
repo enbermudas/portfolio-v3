@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
-import Project from "./components/Project";
 
-import projects from "./data/projects";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -13,15 +12,7 @@ function App() {
         <Navbar />
 
         <div className="container mx-auto mt-6 flex max-w-5xl flex-col gap-12 p-6">
-          {!!projects.length &&
-            projects.map((project) => {
-              return (
-                <Project
-                  key={project.id}
-                  {...project}
-                />
-              );
-            })}
+          <Outlet />
         </div>
 
         <svg

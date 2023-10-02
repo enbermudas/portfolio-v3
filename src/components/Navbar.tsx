@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <div
@@ -7,26 +9,26 @@ export default function Navbar() {
       <div className="navbar-start"></div>
 
       <div className="navbar-center">
-        <a
-          href="_"
+        <Link
+          to="/"
           className="btn btn-ghost text-xl normal-case"
         >
           Home
-        </a>
+        </Link>
 
-        <a
-          href="_"
+        <Link
+          to="/about"
           className="btn btn-ghost text-xl normal-case"
         >
           About
-        </a>
+        </Link>
 
-        <a
-          href="_"
+        <Link
+          to="/contact"
           className="btn btn-ghost text-xl normal-case"
         >
           Contact
-        </a>
+        </Link>
       </div>
 
       <div className="navbar-end"></div>
