@@ -50,7 +50,7 @@ const projects: IProject[] = [
     title: "Guess Me",
     link: "https://enbermudas.github.io/guessme/",
     description:
-      "Small guessing game created to test firebase integration in a React project.",
+      "Guessing game created to test firebase integration in a React project.",
     tags: ["React", "Firebase", "ChakraUI"],
     features: {
       core: ["Create React App", "React", "Javascript"],
@@ -64,11 +64,24 @@ const projects: IProject[] = [
     title: "Fail Express",
     link: "https://github.com/enbermudas/fail-express/",
     description:
-      "An express error-handler middleware for JSON APIs. This library uses http-status.",
+      "Express error-handler middleware for JSON APIs. This library uses http-status.",
     tags: ["Express", "Node", "Javascript"],
     features: {
-      core: ["Node"],
+      core: ["Node", "Javascript"],
       libraries: ["http-errors"],
+    },
+  },
+  {
+    id: 5,
+    type: "web",
+    title: "Poetry",
+    link: "https://enbermudas.github.io/poetry/",
+    description: "Poems search web ui made with React.",
+    tags: ["React", "ChakraUI", "Create React App"],
+    features: {
+      core: ["Create React App", "Typescript"],
+      styles: ["ChakraUI"],
+      libraries: ["Axios"],
     },
   },
 ];

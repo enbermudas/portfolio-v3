@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div
       id="navbar"
-      className="navbar sticky top-0 z-30 bg-base-100 bg-opacity-80 shadow-sm backdrop-blur"
+      className="navbar sticky top-0 z-30 bg-neutral bg-opacity-80 shadow-sm backdrop-blur"
     >
       <div className="navbar-start"></div>
 

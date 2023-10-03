@@ -4,7 +4,7 @@ import projectsData from "../data/projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-12 p-6">
+    <main className="flex flex-col gap-12 p-6 pb-32">
       {!!projectsData.length &&
         projectsData.map((project) => {
           return (
@@ -14,6 +14,6 @@ export default function Home() {
             />
           );
         })}
-    </div>
+    </main>
   );
 }

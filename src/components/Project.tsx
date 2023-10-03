@@ -33,8 +33,9 @@ export default function Project({
     <motion.div
       initial={{ opacity: 0, x: id % 2 ? 100 : -100 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ type: "spring", stiffness: 100 }}
-      className="mockup-browser mt-2 max-w-full border-[1px] border-black/25 bg-base-300 shadow-xl shadow-black/5 ring-8 ring-black/10 dark:border-white/25 dark:shadow-white/5 dark:ring-white/10"
+      transition={{ type: "spring", stiffness: 100, delay: 0.05 }}
+      whileHover={{ scale: 1.025 }}
+      className="shadow-white/ mockup-browser mt-2 max-w-full border-[1px] border-white/25 bg-base-300  shadow-xl ring-8 ring-white/10"
     >
       <div className="mockup-browser-toolbar">
         <div className="input">

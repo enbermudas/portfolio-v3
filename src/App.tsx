@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 import { Outlet } from "react-router-dom";
@@ -14,6 +15,8 @@ function App() {
         <div className="container mx-auto mt-6 max-w-5xl ">
           <Outlet />
         </div>
+
+        <Footer />
 
         <svg
           id="patternId"

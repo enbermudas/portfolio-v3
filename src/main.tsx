@@ -9,6 +9,7 @@ import Error from "./views/Error.tsx";
 import Home from "./views/Home.tsx";
 
 import "./index.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const router = createBrowserRouter([
   {
