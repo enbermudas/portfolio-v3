@@ -1,4 +1,28 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+interface Link {
+  id: string;
+  to: string;
+  text: string;
+}
+
+const LINKS: Link[] = [
+  {
+    id: "home",
+    to: "/",
+    text: "Home",
+  },
+  {
+    id: "about",
+    to: "/about",
+    text: "About",
+  },
+  {
+    id: "contact",
+    to: "/contact",
+    text: "Contact",
+  },
+];
 
 export default function Navbar() {
   return (
@@ -8,27 +32,18 @@ export default function Navbar() {
     >
       <div className="navbar-start"></div>
 
-      <div className="navbar-center">
-        <Link
-          to="/"
-          className="btn btn-ghost text-xl normal-case"
-        >
-          Home
-        </Link>
-
-        <Link
-          to="/about"
-          className="btn btn-ghost text-xl normal-case"
-        >
-          About
-        </Link>
-
-        <Link
-          to="/contact"
-          className="btn btn-ghost text-xl normal-case"
-        >
-          Contact
-        </Link>
+      <div className="navbar-center gap-2">
+        {LINKS.map(({ id, to, text }) => (
+          <NavLink
+            key={id}
+            to={to}
+            className={({ isActive }) =>
+              `btn btn-ghost text-xl normal-case ${isActive && "btn-active"}`
+            }
+          >
+            {text}
+          </NavLink>
+        ))}
       </div>
 
       <div className="navbar-end"></div>
