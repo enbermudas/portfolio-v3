@@ -12,7 +12,7 @@ function App() {
       <div className="relative isolate">
         <Navbar />
 
-        <div className="container mx-auto mt-6 max-w-5xl ">
+        <div className="container mx-auto mt-6 max-w-6xl ">
           <Outlet />
         </div>
 

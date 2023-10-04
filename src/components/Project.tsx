@@ -31,11 +31,12 @@ export default function Project({
 }: IProject) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: id % 2 ? 100 : -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      id={id.toString()}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", stiffness: 100, delay: 0.05 }}
       whileHover={{ scale: 1.025 }}
-      className="shadow-white/ mockup-browser mt-2 max-w-full border-[1px] border-white/25 bg-base-300  shadow-xl ring-8 ring-white/10"
+      className="mockup-browser mt-2 max-w-full border-[1px] border-white/25 bg-base-300 ring-8 ring-white/10"
     >
       <div className="mockup-browser-toolbar">
         <div className="input">
@@ -49,7 +50,7 @@ export default function Project({
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-12 grid-rows-6 gap-6 bg-base-200 p-6">
+      <div className="flex flex-col gap-6 bg-base-200 p-6 md:grid md:grid-cols-12 md:grid-rows-6">
         <Card
           title={getType(type)}
           className="col-span-6 row-span-3"
@@ -57,7 +58,7 @@ export default function Project({
           <div className="flex flex-col gap-2">
             <h1 className="text-xl font-bold">{title}</h1>
 
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 md:flex-row">
               {!!tags.length &&
                 tags.map((tag) => {
                   return (
