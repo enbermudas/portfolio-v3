@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import Project from "../components/Project";
 
@@ -14,7 +15,12 @@ export default function Home() {
               <Project {...project} />
 
               {idx !== projectsData.length - 1 && (
-                <div className="divider"></div>
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "50%" }}
+                  transition={{ type: "spring", stiffness: 100, delay: 0.05 }}
+                  className="divider self-center"
+                ></motion.div>
               )}
             </React.Fragment>
           );
